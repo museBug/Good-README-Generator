@@ -6,6 +6,7 @@ const fetch = require('node-fetch');
 const writeFileAsync = util.promisify(fs.writeFile);
 
 let answers;
+let readme;
 
 function promptUser() {
   return inquirer.prompt([
@@ -27,7 +28,7 @@ function promptUser() {
   {
       type: `input`,
       name: `usage`,
-      message: `Any instructions on how the app should be used`,
+      message: `Any instructions on how the app should be used?`,
 
   },
   {
@@ -38,7 +39,7 @@ function promptUser() {
   {
       type: `input`,
       name: `contributors`,
-      message: `usernames of contributors, separated by commas?`
+      message: `Usernames of contributors, separated by commas?`
   },
   {
       type: 'input',
@@ -70,16 +71,16 @@ ${usage}
 ${license}
 
  ## Contributors`;
-
+ 
     for (let name of contributors) {
         generateString += `
-[![](https://img.shields.io/badge/github-${name}-brightgreen?style=plastic)](https://www.github.com/${name})`
+[![](https://img.shields.io/badge/GitHub-${name}-brightgreen?style=plastic)](https://www.github.com/${name})`
     }
     generateString += `
 ## Questions
-![](${userAvatar}&s=200)
+![](${userAvatar}&s=150)
 [![](https://img.shields.io/badge/gitHub-${username}-blue?style=plastic)](https://www.github.com/${username}) | 
-[![](https://img.shields.io/badge/email-${userMail}-purple?style=plastic)](mailto:${userMail})
+[![](https://img.shields.io/badge/email-${userMail}-pink?style=plastic)](mailto:${userMail})
 `
     
     return generateString;
@@ -96,7 +97,7 @@ async function init() {
     let getEmail = await fetch(`https://api.github.com/users/${answers.username}/events/public`);
     getEmail = await getEmail.json();
     answers.userAvatar = getApi.avatar_url;
-    //answers.userMail = getEmail[0].payload.commits[0].author.email;
+    answers.userMail = getEmail[0].payload.commits[0].author.email;
     const myText = generateReadme(answers);
 
     await writeFileAsync("README.md", myText, 'utf8');
