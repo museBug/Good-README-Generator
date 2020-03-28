@@ -1,18 +1,26 @@
+# Good Readme generator
 
-# Good Readme
-[![GitHub license] (https://img.shields.io/badge/license-undefined-pink.svg)](function generateProjectUrl(github, title) {
-  const caseTitle = title.toLowerCase().split("").join("-");
-  return `https://github.com/${github}/${caseTitle}`;
-})
+### generator
 
-## Description
+## Table of Contents
 
-Generates a good readme template for repos, like this one you're reading.
+[Installation](#Installation) | [Usage](#Usage) | [License](#License) | [Contributors](#Contributors) | [Questions](#Questions)
 
-## Table of contents
+## Installation
 
-* [Installation](#installation)
-* [License](#license)
-* [Contributing](#contributing)
-* [Questions](#questions)
-* [Usage](#usage)
+npm install
+
+## Usage
+
+node index
+
+## License
+
+MIT
+
+ ## Contributors
+[![](https://img.shields.io/badge/github-altays-brightgreen?style=plastic)](https://www.github.com/altays)
+## Questions
+![](https://avatars1.githubusercontent.com/u/58890404?v=4&s=200)
+[![](https://img.shields.io/badge/gitHub-Antidetka-blue?style=plastic)](https://www.github.com/Antidetka) | 
+[![](https://img.shields.io/badge/email-undefined-purple?style=plastic)](mailto:undefined)
