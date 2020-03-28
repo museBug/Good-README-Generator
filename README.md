@@ -1,2 +1,18 @@
-# Good-README-Generator
-A command-line application will allow for quick and easy generation of a project README to get started quickly. This will allow a project creator to spend more time working on finishing the project and less time creating a good README.
+
+# Good Readme
+[![GitHub license] (https://img.shields.io/badge/license-undefined-pink.svg)](function generateProjectUrl(github, title) {
+  const caseTitle = title.toLowerCase().split("").join("-");
+  return `https://github.com/${github}/${caseTitle}`;
+})
+
+## Description
+
+Generates a good readme template for repos, like this one you're reading.
+
+## Table of contents
+
+* [Installation](#installation)
+* [License](#license)
+* [Contributing](#contributing)
+* [Questions](#questions)
+* [Usage](#usage)
