@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Antidetka/Good-README-Generator#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "dotenv-safe": "^8.2.0",
     "inquirer": "^7.1.0",
